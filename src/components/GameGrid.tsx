@@ -15,7 +15,7 @@ const GameGrid = () => {
           xl: 5,
         }}
         padding="10px"
-        spacing={10}
+        spacing={8}
       >
         {games.map((game) => (
           <GameCard key={game.id} game={game} />
