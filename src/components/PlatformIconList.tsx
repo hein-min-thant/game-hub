@@ -30,7 +30,7 @@ const PlatformIconList = ({ platforms }: Props) => {
     android: FaAndroid,
   };
   return (
-    <HStack marginY={"10px"}>
+    <HStack marginY={"5px"}>
       {platforms.map((platform) => (
         <Icon
           key={platform.slug}
