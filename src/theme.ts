@@ -19,6 +19,11 @@ const theme = extendTheme({
       900: "#111",
     },
   },
+
+  fonts: {
+    body: "Inter, sans-serif",
+    heading: "InterVariable, sans-serif",
+  },
 });
 
 export default theme;
