@@ -31,8 +31,6 @@ function App() {
         base: "1fr",
         lg: "250px 1fr",
       }}
-      height="100vh"
-      overflow="hidden"
     >
       <GridItem area="nav">
         <SearchContex.Provider value={onSearch}>
