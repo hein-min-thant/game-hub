@@ -5,7 +5,7 @@ import GenresList from "./components/GenresList";
 import { useState } from "react";
 import { Genre } from "./hooks/useGenres";
 import PlatformSelector from "./components/PlatformSelector";
-import { Platform } from "./hooks/useGames";
+import { Platform } from "./hooks/usePlatform";
 import SortSelector from "./components/SortSelector";
 import { SearchContex } from "./components/SearchContex";
 import GameHeading from "./components/GameHeading";
@@ -31,6 +31,8 @@ function App() {
         base: "1fr",
         lg: "250px 1fr",
       }}
+      height="100vh"
+      overflow="hidden"
     >
       <GridItem area="nav">
         <SearchContex.Provider value={onSearch}>
@@ -38,14 +40,14 @@ function App() {
         </SearchContex.Provider>
       </GridItem>
       <Show above="lg">
-        <GridItem area="aside" paddingX={5}>
+        <GridItem area="aside" paddingX={5} overflowY="auto">
           <GenresList
             onSelectGenre={(genre) => setGameQuery({ ...gameQuery, genre })}
             selectedGenre={gameQuery.genre}
           />
         </GridItem>
       </Show>
-      <GridItem area="main">
+      <GridItem area="main" overflowY="auto">
         <Box paddingLeft={2}>
           <GameHeading gameQuery={gameQuery} />
           <HStack spacing={5} marginBottom={5}>
