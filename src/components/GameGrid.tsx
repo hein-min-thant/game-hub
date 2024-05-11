@@ -1,5 +1,5 @@
 import useGames from "../hooks/useGames";
-import { SimpleGrid, Spinner, Text } from "@chakra-ui/react";
+import { Alert, AlertIcon, SimpleGrid, Spinner, Text } from "@chakra-ui/react";
 import GameCard from "./GameCard";
 import GameCardSkeleton from "./GameCardSkeleton";
 import GameCardContainer from "./GameCardContainer";
@@ -16,7 +16,14 @@ const GameGrid = ({ gameQuery }: Props) => {
   const { data, error, isLoading, fetchNextPage, hasNextPage } =
     useGames(gameQuery);
   const skeletons = [1, 2, 3, 4, 5, 6, 7, 8];
-  if (error) return <Text> {error.message}</Text>;
+
+  if (error)
+    return (
+      <Alert status="error" width="fit-content">
+        <AlertIcon />
+        {error.message}
+      </Alert>
+    );
 
   const FetchedGameCount =
     data?.pages.reduce((total, page) => total + page.results.length, 0) || 0;
