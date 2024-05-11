@@ -21,7 +21,7 @@ const GameGrid = ({ gameQuery }: Props) => {
   const FetchedGameCount =
     data?.pages.reduce((total, page) => total + page.results.length, 0) || 0;
   return (
-    <div id="scrollTarget" style={{ height: "100vh", overflowY: "auto" }}>
+    <div id="scrollTarget" style={{ overflowY: "auto" }}>
       <InfiniteScroll
         dataLength={FetchedGameCount}
         hasMore={hasNextPage}
