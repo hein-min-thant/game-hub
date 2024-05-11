@@ -24,7 +24,6 @@ function App() {
 
   return (
     <Grid
-      id="hello"
       templateAreas={{
         base: `"nav" "main"`,
         lg: `"nav nav" "aside main"`,
@@ -33,8 +32,6 @@ function App() {
         base: "1fr",
         lg: "250px 1fr",
       }}
-      overflow="hidden"
-      height="100vh"
     >
       <GridItem area="nav">
         <SearchContex.Provider value={onSearch}>
