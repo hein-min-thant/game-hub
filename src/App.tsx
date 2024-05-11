@@ -21,8 +21,10 @@ function App() {
   const onSearch = (searchText: string) =>
     setGameQuery({ ...gameQuery, searchText: searchText });
   const [gameQuery, setGameQuery] = useState<GameQuery>({} as GameQuery);
+
   return (
     <Grid
+      id="hello"
       templateAreas={{
         base: `"nav" "main"`,
         lg: `"nav nav" "aside main"`,
@@ -31,6 +33,8 @@ function App() {
         base: "1fr",
         lg: "250px 1fr",
       }}
+      overflow="hidden"
+      height="100vh"
     >
       <GridItem area="nav">
         <SearchContex.Provider value={onSearch}>
