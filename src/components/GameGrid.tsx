@@ -30,7 +30,6 @@ const GameGrid = () => {
         loader={<Spinner />}
       >
         <SimpleGrid
-          padding="10px"
           columns={{
             sm: 1,
             md: 2,
