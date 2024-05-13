@@ -1,5 +1,3 @@
-import React from "react";
-import { Game } from "../entities/Game";
 import useScreenshots from "../hooks/useScreenshots";
 import { Image, SimpleGrid } from "@chakra-ui/react";
 interface Props {
