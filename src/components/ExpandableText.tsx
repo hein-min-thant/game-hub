@@ -22,6 +22,7 @@ const ExpandableText = ({ children }: Props) => {
         size="xs"
         fontWeight="bold"
         colorScheme="yellow"
+        marginX={3}
       >
         {expanded ? "Show Less" : "Show More"}
       </Button>
